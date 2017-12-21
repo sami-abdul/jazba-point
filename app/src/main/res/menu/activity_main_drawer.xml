@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navComputing"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Computing &amp; Accessories" />
+        <item
+            android:id="@+id/navPhones"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Phones &amp; Tablets" />
+        <item
+            android:id="@+id/navGrocers"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Grocer's Shop" />
+        <item
+            android:id="@+id/navFashion"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Fashion" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="About Us" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Customer Support" />
+        </menu>
+    </item>
+
+</menu>
