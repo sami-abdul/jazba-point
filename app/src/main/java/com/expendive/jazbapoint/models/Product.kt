@@ -3,6 +3,69 @@ package com.expendive.jazbapoint.models
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
+class ProductSelf {
+    @SerializedName("href")
+    @Expose
+    var href: String? = null
+}
+
+class MetaDatum {
+    @SerializedName("id")
+    @Expose
+    var id: Int? = null
+    @SerializedName("key")
+    @Expose
+    var key: String? = null
+    @SerializedName("value")
+    @Expose
+    var value: String? = null
+}
+
+class ProductLinks {
+    @SerializedName("self")
+    @Expose
+    var self: List<Self>? = null
+    @SerializedName("collection")
+    @Expose
+    var collection: List<Collection>? = null
+}
+
+class ProductCollection {
+    @SerializedName("href")
+    @Expose
+    var href: String? = null
+}
+
+class Image {
+    @SerializedName("id")
+    @Expose
+    var id: Int? = null
+    @SerializedName("date_created")
+    @Expose
+    var dateCreated: String? = null
+    @SerializedName("date_created_gmt")
+    @Expose
+    var dateCreatedGmt: String? = null
+    @SerializedName("date_modified")
+    @Expose
+    var dateModified: String? = null
+    @SerializedName("date_modified_gmt")
+    @Expose
+    var dateModifiedGmt: String? = null
+    @SerializedName("src")
+    @Expose
+    var src: String? = null
+    @SerializedName("name")
+    @Expose
+    var name: String? = null
+    @SerializedName("alt")
+    @Expose
+    var alt: String? = null
+    @SerializedName("position")
+    @Expose
+    var position: Int? = null
+}
+
 class ProductCategory {
     @SerializedName("id")
     @Expose
@@ -199,8 +262,31 @@ class Product {
     @SerializedName("categories")
     @Expose
     var categories: List<ProductCategory>? = null
+    @SerializedName("tags")
+    @Expose
+    private var tags: List<Any>? = null
+    @SerializedName("images")
+    @Expose
+    private var images: List<Image>? = null
+    @SerializedName("attributes")
+    @Expose
+    private var attributes: List<Any>? = null
+    @SerializedName("default_attributes")
+    @Expose
+    private var defaultAttributes: List<Any>? = null
+    @SerializedName("variations")
+    @Expose
+    private var variations: List<Any>? = null
+    @SerializedName("grouped_products")
+    @Expose
+    private var groupedProducts: List<Any>? = null
+    @SerializedName("menu_order")
+    @Expose
+    private var menuOrder: Int? = null
+    @SerializedName("_links")
+    @Expose
+    private var links: Links? = null
 
-    override fun toString(): String {
-        return "Product(id=$id, name=$name, slug=$slug, permalink=$permalink, dateCreated=$dateCreated, dateCreatedGmt=$dateCreatedGmt, dateModified=$dateModified, dateModifiedGmt=$dateModifiedGmt, type=$type, status=$status, featured=$featured, catalogVisibility=$catalogVisibility, description=$description, shortDescription=$shortDescription, sku=$sku, price=$price, regularPrice=$regularPrice, salePrice=$salePrice, dateOnSaleFrom=$dateOnSaleFrom, dateOnSaleFromGmt=$dateOnSaleFromGmt, dateOnSaleTo=$dateOnSaleTo, dateOnSaleToGmt=$dateOnSaleToGmt, priceHtml=$priceHtml, onSale=$onSale, purchasable=$purchasable, totalSales=$totalSales, virtual=$virtual, downloadable=$downloadable, downloads=$downloads, downloadLimit=$downloadLimit, downloadExpiry=$downloadExpiry, externalUrl=$externalUrl, buttonText=$buttonText, taxStatus=$taxStatus, taxClass=$taxClass, manageStock=$manageStock, stockQuantity=$stockQuantity, inStock=$inStock, backorders=$backorders, backordersAllowed=$backordersAllowed, backordered=$backordered, soldIndividually=$soldIndividually, weight=$weight, dimensions=$dimensions, shippingRequired=$shippingRequired, shippingTaxable=$shippingTaxable, shippingClass=$shippingClass, shippingClassId=$shippingClassId, reviewsAllowed=$reviewsAllowed, averageRating=$averageRating, ratingCount=$ratingCount, relatedIds=$relatedIds, upsellIds=$upsellIds, crossSellIds=$crossSellIds, parentId=$parentId, purchaseNote=$purchaseNote, categories=$categories)"
-    }
+    override fun toString() =
+            "Product(id=$id, name=$name, slug=$slug, permalink=$permalink, dateCreated=$dateCreated, dateCreatedGmt=$dateCreatedGmt, dateModified=$dateModified, dateModifiedGmt=$dateModifiedGmt, type=$type, status=$status, featured=$featured, catalogVisibility=$catalogVisibility, description=$description, shortDescription=$shortDescription, sku=$sku, price=$price, regularPrice=$regularPrice, salePrice=$salePrice, dateOnSaleFrom=$dateOnSaleFrom, dateOnSaleFromGmt=$dateOnSaleFromGmt, dateOnSaleTo=$dateOnSaleTo, dateOnSaleToGmt=$dateOnSaleToGmt, priceHtml=$priceHtml, onSale=$onSale, purchasable=$purchasable, totalSales=$totalSales, virtual=$virtual, downloadable=$downloadable, downloads=$downloads, downloadLimit=$downloadLimit, downloadExpiry=$downloadExpiry, externalUrl=$externalUrl, buttonText=$buttonText, taxStatus=$taxStatus, taxClass=$taxClass, manageStock=$manageStock, stockQuantity=$stockQuantity, inStock=$inStock, backorders=$backorders, backordersAllowed=$backordersAllowed, backordered=$backordered, soldIndividually=$soldIndividually, weight=$weight, dimensions=$dimensions, shippingRequired=$shippingRequired, shippingTaxable=$shippingTaxable, shippingClass=$shippingClass, shippingClassId=$shippingClassId, reviewsAllowed=$reviewsAllowed, averageRating=$averageRating, ratingCount=$ratingCount, relatedIds=$relatedIds, upsellIds=$upsellIds, crossSellIds=$crossSellIds, parentId=$parentId, purchaseNote=$purchaseNote, categories=$categories)"
 }

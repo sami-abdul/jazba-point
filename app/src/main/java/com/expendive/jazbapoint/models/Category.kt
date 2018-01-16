@@ -8,7 +8,6 @@ import com.google.gson.annotations.SerializedName
  */
 
 class Category {
-
     @SerializedName("id")
     @Expose
     var id: Int? = null
@@ -46,15 +45,16 @@ class Category {
 }
 
 class Collection {
-
     @SerializedName("href")
     @Expose
     var href: String? = null
 
+    override fun toString(): String {
+        return "Collection(href=$href)"
+    }
 }
 
 class Links {
-
     @SerializedName("self")
     @Expose
     var self: List<Self>? = null
@@ -65,18 +65,27 @@ class Links {
     @Expose
     var up: List<Up>? = null
 
+    override fun toString(): String {
+        return "Links(self=$self, collection=$collection, up=$up)"
+    }
 }
 
 class Self {
-
     @SerializedName("href")
     @Expose
     var href: String? = null
 
+    override fun toString(): String {
+        return "Self(href=$href)"
+    }
 }
 
 class Up {
     @SerializedName("href")
     @Expose
     var href: String? = null
+
+    override fun toString(): String {
+        return "Up(href=$href)"
+    }
 }

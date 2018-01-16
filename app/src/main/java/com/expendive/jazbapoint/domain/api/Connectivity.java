@@ -1,4 +1,4 @@
-package com.expendive.jazbapoint.domain.helper;
+package com.expendive.jazbapoint.domain.api;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

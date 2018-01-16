@@ -7,7 +7,6 @@ import android.os.Handler;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
-import android.support.v7.graphics.Palette;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -45,15 +44,12 @@ public class HomeFragment extends Fragment {
 
         view.findViewById(R.id.search_item).setOnClickListener(
                 new OnClickListener() {
-
                     @Override
                     public void onClick(View v) {
-
                         Utils.switchFragmentWithAnimation(R.id.frag_container,
                                 new SearchProductFragment(),
                                 ((ECartHomeActivity) getActivity()), null,
                                 AnimationType.SLIDE_UP);
-
                     }
                 });
 
