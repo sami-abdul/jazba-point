@@ -1,11 +1,3 @@
-/*
- * Copyright (c) 2017. http://hiteshsahu.com- All Rights Reserved
- * Unauthorized copying of this file, via any medium is strictly prohibited
- * If you use or distribute this project then you MUST ADD A COPY OF LICENCE
- * along with the project.
- *  Written by Hitesh Sahu <hiteshkrsahu@Gmail.com>, 2017.
- */
-
 package com.expendive.jazbapoint.domain.helper;
 
 import android.content.Context;
@@ -27,11 +19,6 @@ import java.net.NetworkInterface;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Check device's network connectivity and speed
- *
- * @author emil http://stackoverflow.com/users/220710/emil
- */
 public class Connectivity {
 
     /**

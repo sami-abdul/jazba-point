@@ -19,11 +19,6 @@ import com.expendive.jazbapoint.ui.activities.ECartHomeActivity;
 import com.expendive.jazbapoint.util.Utils;
 import com.expendive.jazbapoint.util.Utils.AnimationType;
 
-// TODO: Auto-generated Javadoc
-
-/**
- * Fragment that appears in the "content_frame", shows a animal.
- */
 public class AboutUsFragment extends Fragment {
 
     private Toolbar mToolbar;

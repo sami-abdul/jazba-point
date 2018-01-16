@@ -1,12 +1,3 @@
-/*
- * Copyright (c) 2017. http://hiteshsahu.com- All Rights Reserved
- * Unauthorized copying of this file, via any medium is strictly prohibited
- * If you use or distribute this project then you MUST ADD A COPY OF LICENCE
- * along with the project.
- *  Written by Hitesh Sahu <hiteshkrsahu@Gmail.com>, 2017.
- */
-
-
 package com.expendive.jazbapoint.ui.customs;
 
 import android.content.Context;
@@ -23,11 +14,6 @@ import android.view.animation.Interpolator;
 
 import java.util.Arrays;
 
-/**
- * ViewDragHelper is a utility class for writing custom ViewGroups. It offers a number
- * of useful operations and state tracking for allowing a user to drag and reposition
- * views within their parent ViewGroup.
- */
 public class ViewDragHelper {
     private static final String TAG = "ViewDragHelper";
 

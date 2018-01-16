@@ -1,11 +1,3 @@
-/*
- * Copyright (c) 2017. http://hiteshsahu.com- All Rights Reserved
- * Unauthorized copying of this file, via any medium is strictly prohibited
- * If you use or distribute this project then you MUST ADD A COPY OF LICENCE
- * along with the project.
- *  Written by Hitesh Sahu <hiteshkrsahu@Gmail.com>, 2017.
- */
-
 package com.expendive.jazbapoint.ui.customs;
 
 import android.graphics.Canvas;
@@ -13,16 +5,6 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 
-/**
- * An implementation of {@link ItemTouchHelper.Callback} that enables basic drag & drop and
- * swipe-to-dismiss. Drag events are automatically started by an item long-press.<br/>
- * </br/>
- * Expects the <code>RecyclerView.Adapter</code> to listen for {@link
- * ItemTouchHelperAdapter} callbacks and the <code>RecyclerView.ViewHolder</code> to implement
- * {@link ItemTouchHelperViewHolder}.
- *
- * @author Paul Burke (ipaulpro)
- */
 public class SimpleItemTouchHelperCallback extends ItemTouchHelper.Callback {
 
     public static final float ALPHA_FULL = 1.0f;

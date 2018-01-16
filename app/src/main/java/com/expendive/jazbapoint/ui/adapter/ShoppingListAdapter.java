@@ -1,11 +1,3 @@
-/*
- * Copyright (c) 2017. http://hiteshsahu.com- All Rights Reserved
- * Unauthorized copying of this file, via any medium is strictly prohibited
- * If you use or distribute this project then you MUST ADD A COPY OF LICENCE
- * along with the project.
- *  Written by Hitesh Sahu <hiteshkrsahu@Gmail.com>, 2017.
- */
-
 package com.expendive.jazbapoint.ui.adapter;
 
 import android.content.Context;
@@ -44,13 +36,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Simple RecyclerView.Adapter that implements {@link ItemTouchHelperAdapter} to
- * respond to move and dismiss events from a
- * {@link android.support.v7.widget.helper.ItemTouchHelper}.
- *
- * @author Hitesh Sahu (hiteshsahu.com)
- */
 public class ShoppingListAdapter extends
         RecyclerView.Adapter<ShoppingListAdapter.ItemViewHolder> implements
         ItemTouchHelperAdapter {

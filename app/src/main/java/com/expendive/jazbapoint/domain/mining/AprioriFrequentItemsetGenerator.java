@@ -1,11 +1,3 @@
-/*
- * Copyright (c) 2017. http://hiteshsahu.com- All Rights Reserved
- * Unauthorized copying of this file, via any medium is strictly prohibited
- * If you use or distribute this project then you MUST ADD A COPY OF LICENCE
- * along with the project.
- *  Written by Hitesh Sahu <hiteshkrsahu@Gmail.com>, 2017.
- */
-
 package com.expendive.jazbapoint.domain.mining;
 
 import android.os.Build;
@@ -20,15 +12,6 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 
-/**
- * This class implements the
- * <a href="https://en.wikipedia.org/wiki/Apriori_algorithm">Apriori algorithm</a>
- * for frequent itemset generation.
- *
- * @param <I> the actual item type.
- * @author Rodion "rodde" Efremov
- * @version 1.6 (Sep 14, 2015)
- */
 public class AprioriFrequentItemsetGenerator<I> {
 
     private static final Comparator ITEM_COMPARATOR = new Comparator() {

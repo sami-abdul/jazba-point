@@ -1,21 +1,7 @@
-/*
- * Copyright (c) 2017. http://hiteshsahu.com- All Rights Reserved
- * Unauthorized copying of this file, via any medium is strictly prohibited
- * If you use or distribute this project then you MUST ADD A COPY OF LICENCE
- * along with the project.
- *  Written by Hitesh Sahu <hiteshkrsahu@Gmail.com>, 2017.
- */
-
 package com.expendive.jazbapoint.ui.customs;
 
 import android.support.v7.widget.helper.ItemTouchHelper;
 
-/**
- * Interface to notify an item ViewHolder of relevant callbacks from {@link
- * android.support.v7.widget.helper.ItemTouchHelper.Callback}.
- *
- * @author Paul Burke (ipaulpro)
- */
 public interface ItemTouchHelperViewHolder {
 
     /**

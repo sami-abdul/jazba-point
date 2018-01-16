@@ -26,9 +26,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- * Class to show a dialog with the latest changes for the current app version.
- */
 public class WhatsNewDialog {
 
     private static final String TAG = "ChangeLogDialog";

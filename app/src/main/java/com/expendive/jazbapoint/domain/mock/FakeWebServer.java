@@ -1,11 +1,3 @@
-/*
- * Copyright (c) 2017. http://hiteshsahu.com- All Rights Reserved
- * Unauthorized copying of this file, via any medium is strictly prohibited
- * If you use or distribute this project then you MUST ADD A COPY OF LICENCE
- * along with the project.
- *  Written by Hitesh Sahu <hiteshkrsahu@Gmail.com>, 2017.
- */
-
 package com.expendive.jazbapoint.domain.mock;
 
 import com.expendive.jazbapoint.models.CenterRepository;
@@ -15,9 +7,6 @@ import com.expendive.jazbapoint.models.entities.ProductCategoryModel;
 import java.util.ArrayList;
 import java.util.concurrent.ConcurrentHashMap;
 
-/*
- * This class serve as fake server and provides dummy product and category with real Image Urls taken from flipkart
- */
 public class FakeWebServer {
 
     private static FakeWebServer fakeServer;

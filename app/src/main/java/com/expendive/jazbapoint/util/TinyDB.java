@@ -1,16 +1,3 @@
-/*
- * Copyright (c) 2017. http://hiteshsahu.com- All Rights Reserved
- * Unauthorized copying of this file, via any medium is strictly prohibited
- * If you use or distribute this project then you MUST ADD A COPY OF LICENCE
- * along with the project.
- *  Written by Hitesh Sahu <hiteshkrsahu@Gmail.com>, 2017.
- */
-
-/*
- *  The "‚‗‚" character is not a comma, it is the SINGLE LOW-9 QUOTATION MARK unicode 201A
- *  and unicode 2017 that are used for separating the items in a list.
- */
-
 package com.expendive.jazbapoint.util;
 
 import android.content.Context;
@@ -33,9 +20,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
-
-//import com.google.gson.Gson;
-
 
 public class TinyDB {
 

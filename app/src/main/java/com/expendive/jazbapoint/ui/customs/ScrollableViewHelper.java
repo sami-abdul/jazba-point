@@ -1,11 +1,3 @@
-/*
- * Copyright (c) 2017. http://hiteshsahu.com- All Rights Reserved
- * Unauthorized copying of this file, via any medium is strictly prohibited
- * If you use or distribute this project then you MUST ADD A COPY OF LICENCE
- * along with the project.
- *  Written by Hitesh Sahu <hiteshkrsahu@Gmail.com>, 2017.
- */
-
 package com.expendive.jazbapoint.ui.customs;
 
 import android.support.v7.widget.RecyclerView;
@@ -13,11 +5,6 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.ScrollView;
 
-/**
- * Helper class for determining the current scroll positions for scrollable views. Currently works
- * for ListView, ScrollView & RecyclerView, but the library users can override it to add support
- * for other views.
- */
 public class ScrollableViewHelper {
     /**
      * Returns the current scroll position of the scrollable view. If this method returns zero or

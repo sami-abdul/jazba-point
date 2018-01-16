@@ -29,13 +29,10 @@ public class MyCartFragment extends Fragment implements OnStartDragListener {
     private static FrameLayout noItemDefault;
     private static RecyclerView recyclerView;
     private ItemTouchHelper mItemTouchHelper;
+
     public MyCartFragment() {
     }
 
-    /**
-     * @param rootView
-     * @param myCartListView
-     */
     public static void updateMyCartFragment(boolean showList) {
 
         if (showList) {

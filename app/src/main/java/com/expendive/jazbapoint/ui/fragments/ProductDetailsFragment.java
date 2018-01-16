@@ -37,11 +37,6 @@ import com.squareup.picasso.Picasso;
 
 import java.math.BigDecimal;
 
-// TODO: Auto-generated Javadoc
-
-/**
- * Fragment that appears in the "content_frame", shows a animal.
- */
 public class ProductDetailsFragment extends Fragment {
 
     private int productListNumber;

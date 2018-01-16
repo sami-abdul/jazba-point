@@ -306,7 +306,6 @@ public class ECartHomeActivity extends AppCompatActivity {
 	/*
      * Makes fake Volley request by adding request in fake Volley Queue and
 	 * return mock JSON String plese visit
-	 * com.hitesh_sahu.retailapp.domain.mock.FakeHttpStack and
 	 * FakeRequestQueue queu
 	 */
 //	private void makeFakeVolleyJsonArrayRequest() {
