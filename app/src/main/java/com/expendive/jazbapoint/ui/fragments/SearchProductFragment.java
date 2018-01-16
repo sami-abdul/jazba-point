@@ -55,7 +55,7 @@ public class SearchProductFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        rootView = inflater.inflate(R.layout.frag_search_product,
+        rootView = inflater.inflate(R.layout.fragment_search_product,
                 container, false);
 
         btnSpeak = (ImageButton) rootView.findViewById(R.id.btnSpeak);

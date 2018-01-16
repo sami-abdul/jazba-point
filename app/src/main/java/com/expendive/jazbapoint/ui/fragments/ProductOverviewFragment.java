@@ -40,7 +40,7 @@ public class ProductOverviewFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.frag_category_details,
+        View view = inflater.inflate(R.layout.fragment_product_overview,
                 container, false);
 
         getActivity().setTitle("Products");

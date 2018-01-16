@@ -43,7 +43,7 @@ public class ContactUsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.frag_about, container,
+        View rootView = inflater.inflate(R.layout.fragment_contact_us, container,
                 false);
 
         getActivity().setTitle("Contact Us");

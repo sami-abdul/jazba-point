@@ -44,7 +44,7 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.frag_product_category, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         view.findViewById(R.id.search_item).setOnClickListener(
                 new OnClickListener() {
