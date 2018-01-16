@@ -21,9 +21,9 @@ import com.expendive.jazbapoint.R;
 import com.expendive.jazbapoint.models.CenterRepository;
 import com.expendive.jazbapoint.models.entities.ProductCategoryModel;
 import com.expendive.jazbapoint.util.ColorGenerator;
-import com.expendive.jazbapoint.ui.customview.LabelView;
-import com.expendive.jazbapoint.ui.customview.TextDrawable;
-import com.expendive.jazbapoint.ui.customview.TextDrawable.IBuilder;
+import com.expendive.jazbapoint.ui.customs.LabelView;
+import com.expendive.jazbapoint.ui.customs.TextDrawable;
+import com.expendive.jazbapoint.ui.customs.TextDrawable.IBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,9 +43,7 @@ public class CategoryListAdapter extends
     private Context context;
 
     public CategoryListAdapter(Context context) {
-
         categoryList = CenterRepository.getCenterRepository().getListOfCategory();
-
         this.context = context;
     }
 
@@ -122,7 +120,6 @@ public class CategoryListAdapter extends
             imagView = ((ImageView) itemView.findViewById(R.id.imageView));
 
             itemView.setOnClickListener(this);
-
         }
 
         @Override
@@ -130,5 +127,4 @@ public class CategoryListAdapter extends
             clickListener.onItemClick(v, getPosition());
         }
     }
-
 }

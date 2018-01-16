@@ -7,7 +7,8 @@
   ~  Written by Hitesh Sahu <hiteshkrsahu@Gmail.com>, 2017.
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/control_overview"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -16,30 +17,30 @@
     android:background="@color/background"
     android:orientation="vertical">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#03A14D" />
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:background="#03A14D" />-->
 
-    <TextView
-        android:id="@+id/new_offers_banner"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_centerVertical="true"
-        android:background="#70000000"
-        android:ellipsize="marquee"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:freezesText="true"
-        android:gravity="center_vertical"
-        android:marqueeRepeatLimit="marquee_forever"
-        android:paddingLeft="10dp"
-        android:scrollHorizontally="true"
-        android:singleLine="true"
-        android:text="@string/offer_banner"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:visibility="gone"></TextView>
+    <!--<TextView-->
+        <!--android:id="@+id/new_offers_banner"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:background="#70000000"-->
+        <!--android:ellipsize="marquee"-->
+        <!--android:focusable="true"-->
+        <!--android:focusableInTouchMode="true"-->
+        <!--android:freezesText="true"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:marqueeRepeatLimit="marquee_forever"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:scrollHorizontally="true"-->
+        <!--android:singleLine="true"-->
+        <!--android:text="@string/offer_banner"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="20sp">-->
+    <!--</TextView>-->
 
     <RelativeLayout
         android:id="@+id/checkout_item_root"
@@ -117,7 +118,7 @@
                 android:freezesText="true"
                 android:gravity="center"
                 android:marqueeRepeatLimit="marquee_forever"
-                android:padding="5dp"
+                android:padding="10dp"
                 android:scrollHorizontally="true"
                 android:singleLine="true"
                 android:text="@string/checkout"

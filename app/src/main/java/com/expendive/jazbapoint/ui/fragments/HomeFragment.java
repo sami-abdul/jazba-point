@@ -29,9 +29,6 @@ public class HomeFragment extends Fragment {
     int mutedColor = R.attr.colorPrimary;
     private CollapsingToolbarLayout collapsingToolbar;
     private RecyclerView recyclerView;
-    /**
-     * The double back to exit pressed once.
-     */
     private boolean doubleBackToExitPressedOnce;
     private final Runnable mRunnable = new Runnable() {
         @Override
@@ -77,23 +74,22 @@ public class HomeFragment extends Fragment {
         collapsingToolbar = (CollapsingToolbarLayout) view
                 .findViewById(R.id.collapsing_toolbar);
 
-        collapsingToolbar.setTitle("Categories");
+        collapsingToolbar.setTitle("Featured Products");
 
         ImageView header = (ImageView) view.findViewById(R.id.header);
 
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(),
                 R.drawable.header);
 
-        Palette.from(bitmap).generate(new Palette.PaletteAsyncListener() {
-            @SuppressWarnings("ResourceType")
-            @Override
-            public void onGenerated(Palette palette) {
-
-                mutedColor = palette.getMutedColor(R.color.primary_500);
-                collapsingToolbar.setContentScrimColor(mutedColor);
-                collapsingToolbar.setStatusBarScrimColor(R.color.black_trans80);
-            }
-        });
+//        Palette.from(bitmap).generate(new Palette.PaletteAsyncListener() {
+//            @SuppressWarnings("ResourceType")
+//            @Override
+//            public void onGenerated(Palette palette) {
+//                mutedColor = palette.getMutedColor(R.color.primary_500);
+//                collapsingToolbar.setContentScrimColor(mutedColor);
+//                collapsingToolbar.setStatusBarScrimColor(R.color.black_trans80);
+//            }
+//        });
 
         recyclerView = (RecyclerView) view.findViewById(R.id.scrollableview);
 

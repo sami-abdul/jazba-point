@@ -27,8 +27,8 @@ import com.expendive.jazbapoint.models.CenterRepository;
 import com.expendive.jazbapoint.models.entities.Money;
 import com.expendive.jazbapoint.models.entities.Product;
 import com.expendive.jazbapoint.ui.activities.ECartHomeActivity;
-import com.expendive.jazbapoint.ui.customview.TextDrawable;
-import com.expendive.jazbapoint.ui.customview.TextDrawable.IBuilder;
+import com.expendive.jazbapoint.ui.customs.TextDrawable;
+import com.expendive.jazbapoint.ui.customs.TextDrawable.IBuilder;
 import com.expendive.jazbapoint.util.ColorGenerator;
 import com.expendive.jazbapoint.util.Utils;
 

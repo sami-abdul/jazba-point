@@ -21,8 +21,8 @@ import com.expendive.jazbapoint.util.Utils;
 import com.expendive.jazbapoint.util.Utils.AnimationType;
 import com.expendive.jazbapoint.ui.adapter.ShoppingListAdapter;
 import com.expendive.jazbapoint.ui.adapter.ShoppingListAdapter.OnItemClickListener;
-import com.expendive.jazbapoint.ui.customview.OnStartDragListener;
-import com.expendive.jazbapoint.ui.customview.SimpleItemTouchHelperCallback;
+import com.expendive.jazbapoint.ui.customs.OnStartDragListener;
+import com.expendive.jazbapoint.ui.customs.SimpleItemTouchHelperCallback;
 
 public class MyCartFragment extends Fragment implements OnStartDragListener {
 
@@ -70,7 +70,7 @@ public class MyCartFragment extends Fragment implements OnStartDragListener {
                         Utils.switchFragmentWithAnimation(R.id.frag_container,
                                 new HomeFragment(),
                                 ((ECartHomeActivity) (getContext())),
-                                Utils.HOME_FRAGMENT, AnimationType.SLIDE_DOWN);
+                                Utils.HOME_FRAGMENT_TAG, AnimationType.SLIDE_DOWN);
 
                         return false;
                     }
@@ -129,7 +129,7 @@ public class MyCartFragment extends Fragment implements OnStartDragListener {
                     @Override
                     public void onClick(View v) {
                         Utils.switchContent(R.id.frag_container,
-                                Utils.HOME_FRAGMENT,
+                                Utils.HOME_FRAGMENT_TAG,
                                 ((ECartHomeActivity) (getContext())),
                                 AnimationType.SLIDE_UP);
 
@@ -148,7 +148,7 @@ public class MyCartFragment extends Fragment implements OnStartDragListener {
                         && keyCode == KeyEvent.KEYCODE_BACK) {
 
                     Utils.switchContent(R.id.frag_container,
-                            Utils.HOME_FRAGMENT,
+                            Utils.HOME_FRAGMENT_TAG,
                             ((ECartHomeActivity) (getContext())),
                             AnimationType.SLIDE_UP);
 

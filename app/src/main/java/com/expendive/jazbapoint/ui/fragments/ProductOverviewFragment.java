@@ -47,7 +47,7 @@ public class ProductOverviewFragment extends Fragment {
 
         // Simulate Web service calls
         FakeWebServer.getFakeWebServer().getAllProducts(
-                AppConstants.CURRENT_CATEGORY);
+                AppConstants.INSTANCE.getCURRENT_CATEGORY());
 
         // TODO We Can use Async task But pallete creation is problemitic job
         // will
@@ -103,7 +103,7 @@ public class ProductOverviewFragment extends Fragment {
                         && keyCode == KeyEvent.KEYCODE_BACK) {
 
                     Utils.switchContent(R.id.frag_container,
-                            Utils.HOME_FRAGMENT,
+                            Utils.HOME_FRAGMENT_TAG,
                             ((ECartHomeActivity) (getContext())),
                             AnimationType.SLIDE_RIGHT);
 

@@ -15,32 +15,25 @@
         android:label="@string/app_name"
         android:theme="@style/MyTheme">
         <activity
-            android:name="com.expendive.jazbapoint.ui.activities.MainActivity"
+            android:name=".ui.activities.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/MyTheme">
-
-        </activity>
+            android:theme="@style/MyTheme" />
         <activity
-            android:name="com.expendive.jazbapoint.ui.activities.APrioriResultActivity"
+            android:name=".ui.activities.ECartHomeActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.expendive.jazbapoint.ui.activities.ECartHomeActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait">
-
-        </activity>
-        <activity
-            android:name="com.expendive.jazbapoint.ui.activities.SplashActivity"
+            android:name=".ui.activities.SplashActivity"
             android:noHistory="true"
             android:theme="@android:style/Theme.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.activities.AboutUsActivity" />
+        <activity android:name=".ui.activities.PolicyActivity"></activity>
     </application>
 
 </manifest>

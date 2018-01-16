@@ -122,7 +122,7 @@ public class SearchProductFragment extends Fragment {
                         && keyCode == KeyEvent.KEYCODE_BACK) {
 
                     Utils.switchContent(R.id.frag_container,
-                            Utils.HOME_FRAGMENT,
+                            Utils.HOME_FRAGMENT_TAG,
                             ((ECartHomeActivity) (getContext())),
                             AnimationType.SLIDE_DOWN);
                 }

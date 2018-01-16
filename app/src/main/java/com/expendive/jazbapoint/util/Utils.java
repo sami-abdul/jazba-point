@@ -1,11 +1,3 @@
-/*
- * Copyright (c) 2017. http://hiteshsahu.com- All Rights Reserved
- * Unauthorized copying of this file, via any medium is strictly prohibited
- * If you use or distribute this project then you MUST ADD A COPY OF LICENCE
- * along with the project.
- *  Written by Hitesh Sahu <hiteshkrsahu@Gmail.com>, 2017.
- */
-
 package com.expendive.jazbapoint.util;
 
 import android.content.Context;
@@ -27,11 +19,10 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.graphics.drawable.DrawableCompat;
 
 import com.expendive.jazbapoint.R;
-import com.expendive.jazbapoint.ui.fragments.ContactUsFragment;
+import com.expendive.jazbapoint.ui.fragments.CategoryFragment;
 import com.expendive.jazbapoint.ui.fragments.HomeFragment;
 import com.expendive.jazbapoint.ui.fragments.MyCartFragment;
 import com.expendive.jazbapoint.ui.fragments.ProductOverviewFragment;
-import com.expendive.jazbapoint.ui.fragments.SettingsFragment;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -42,17 +33,17 @@ public class Utils {
 
     public static final String ATTRIBUTE_SCHEMA = "http://schemas.android.com/apk/lib/com.hitesh_sahu.retailapp.util";
 
-    public final static String SHOPPING_LIST_TAG = "SHoppingListFragment";
-    public static final String PRODUCT_OVERVIEW_FRAGMENT_TAG = "ProductOverView";
-    public static final String MY_CART_FRAGMENT = "MyCartFragment";
-    public static final String MY_ORDERS_FRAGMENT = "MYOrdersFragment";
-    public static final String HOME_FRAGMENT = "HomeFragment";
-    public static final String SEARCH_FRAGMENT_TAG = "SearchFragment";
-    public static final String SETTINGS_FRAGMENT_TAG = "SettingsFragment";
-    public static final String OTP_LOGIN_TAG = "OTPLogingFragment";
-    public static final String CONTACT_US_FRAGMENT = "ContactUs";
-    private static final String PREFERENCES_FILE = "materialsample_settings";
-    private static String CURRENT_TAG = null;
+    public static final String HOME_FRAGMENT_TAG = "HomeFragment";
+    public static final String COMPUTING_CATEGORY_FRAGMENT_TAG = "ComputingCategoryFragment";
+    public static final String ACCESSORIES_CATEGORY_FRAGMENT_TAG = "AccessoriesCategoryFragment";
+    public static final String PHONES_CATEGORY_FRAGMENT_TAG = "PhonesCategoryFragment";
+    public static final String GROCERS_CATEGORY_FRAGMENT_TAG = "GrocersCategoryFragment";
+    public static final String WOMEN_CATEGORY_FRAGMENT_TAG = "WomenCategoryFragment";
+    public static final String MEN_CATEGORY_FRAGMENT_TAG = "MenCategoryFragment";
+    public final static String MY_CART_FRAGMENT_TAG = "MyCartFragment";
+    public static final String PRODUCT_OVERVIEW_FRAGMENT_TAG = "ProductOverViewFragment";
+
+    public static String CURRENT_TAG = null;
     private static Map<String, Typeface> TYPEFACE = new HashMap<String, Typeface>();
 
     public static int getToolbarHeight(Context context) {
@@ -292,14 +283,12 @@ public class Utils {
         // If our current fragment is null, or the new fragment is different, we
         // need to change our current fragment
         if (CURRENT_TAG == null || !TAG.equals(CURRENT_TAG)) {
-
             if (transitionStyle != null) {
                 switch (transitionStyle) {
                     case SLIDE_DOWN:
                         // Exit from down
                         transaction.setCustomAnimations(R.anim.slide_up,
                                 R.anim.slide_down);
-
                         break;
                     case SLIDE_UP:
                         // Enter from Up
@@ -338,34 +327,32 @@ public class Utils {
             // If the new fragment can't be found in the manager, create a new
             // one
             if (fragment == null) {
-
-                if (TAG.equals(HOME_FRAGMENT)) {
-                    fragmentToReplace = new HomeFragment();
-                } else if (TAG.equals(SHOPPING_LIST_TAG)) {
-                    fragmentToReplace = new MyCartFragment();
-                } else if (TAG.equals(SETTINGS_FRAGMENT_TAG)) {
-                    fragmentToReplace = new SettingsFragment();
-                } else if (TAG.equals(CONTACT_US_FRAGMENT)) {
-                    fragmentToReplace = new ContactUsFragment();
-                } else if (TAG.equals(PRODUCT_OVERVIEW_FRAGMENT_TAG)) {
-                    fragmentToReplace = new ProductOverviewFragment();
-                } else if (TAG.equals(SHOPPING_LIST_TAG)) {
-                    fragmentToReplace = new MyCartFragment();
+                switch (TAG) {
+                    case HOME_FRAGMENT_TAG:
+                        fragmentToReplace = new HomeFragment();
+                        break;
+                    case PRODUCT_OVERVIEW_FRAGMENT_TAG:
+                        fragmentToReplace = new ProductOverviewFragment();
+                        break;
+                    case MY_CART_FRAGMENT_TAG:
+                        fragmentToReplace = new MyCartFragment();
+                        break;
+                    default:
+                        fragmentToReplace = new CategoryFragment();
                 }
-
-            } else
-
-            {
-                if (TAG.equals(HOME_FRAGMENT)) {
-                    fragmentToReplace = (HomeFragment) fragment;
-                } else if (TAG.equals(SHOPPING_LIST_TAG)) {
-                    fragmentToReplace = (MyCartFragment) fragment;
-                } else if (TAG.equals(PRODUCT_OVERVIEW_FRAGMENT_TAG)) {
-                    fragmentToReplace = (ProductOverviewFragment) fragment;
-                } else if (TAG.equals(SETTINGS_FRAGMENT_TAG)) {
-                    fragmentToReplace = (SettingsFragment) fragment;
-                } else if (TAG.equals(CONTACT_US_FRAGMENT)) {
-                    fragmentToReplace = (ContactUsFragment) fragment;
+            } else {
+                switch (TAG) {
+                    case HOME_FRAGMENT_TAG:
+                        fragmentToReplace = (HomeFragment) fragment;
+                        break;
+                    case MY_CART_FRAGMENT_TAG:
+                        fragmentToReplace = (MyCartFragment) fragment;
+                        break;
+                    case PRODUCT_OVERVIEW_FRAGMENT_TAG:
+                        fragmentToReplace = (ProductOverviewFragment) fragment;
+                        break;
+                    default:
+                        fragmentToReplace = (CategoryFragment) fragment;
                 }
             }
 
@@ -375,9 +362,7 @@ public class Utils {
             transaction.replace(id, fragmentToReplace, TAG);
             transaction.commit();
 
-        } else
-
-        {
+        } else {
             // Do nothing since we are already on the fragment being changed to
         }
     }
@@ -413,5 +398,4 @@ public class Utils {
     public enum AnimationType {
         SLIDE_LEFT, SLIDE_RIGHT, SLIDE_UP, SLIDE_DOWN, FADE_IN, SLIDE_IN_SLIDE_OUT, FADE_OUT
     }
-
 }

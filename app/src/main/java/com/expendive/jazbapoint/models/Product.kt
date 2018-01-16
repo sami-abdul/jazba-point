@@ -13,11 +13,9 @@ class ProductCategory {
     @SerializedName("slug")
     @Expose
     var slug: String? = null
-
 }
 
 class Dimensions {
-
     @SerializedName("length")
     @Expose
     var length: String? = null
@@ -27,11 +25,9 @@ class Dimensions {
     @SerializedName("height")
     @Expose
     var height: String? = null
-
 }
 
 class Product {
-
     @SerializedName("id")
     @Expose
     var id: Int? = null

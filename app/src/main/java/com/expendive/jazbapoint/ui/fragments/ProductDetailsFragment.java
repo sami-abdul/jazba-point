@@ -26,11 +26,11 @@ import com.expendive.jazbapoint.util.ColorGenerator;
 import com.expendive.jazbapoint.util.Utils;
 import com.expendive.jazbapoint.util.Utils.AnimationType;
 import com.expendive.jazbapoint.ui.adapter.SimilarProductsPagerAdapter;
-import com.expendive.jazbapoint.ui.customview.ClickableViewPager;
-import com.expendive.jazbapoint.ui.customview.ClickableViewPager.OnItemClickListener;
-import com.expendive.jazbapoint.ui.customview.LabelView;
-import com.expendive.jazbapoint.ui.customview.TextDrawable;
-import com.expendive.jazbapoint.ui.customview.TextDrawable.IBuilder;
+import com.expendive.jazbapoint.ui.customs.ClickableViewPager;
+import com.expendive.jazbapoint.ui.customs.ClickableViewPager.OnItemClickListener;
+import com.expendive.jazbapoint.ui.customs.LabelView;
+import com.expendive.jazbapoint.ui.customs.TextDrawable;
+import com.expendive.jazbapoint.ui.customs.TextDrawable.IBuilder;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
@@ -395,7 +395,7 @@ public class ProductDetailsFragment extends Fragment {
                     if (isFromCart) {
 
                         Utils.switchContent(R.id.frag_container,
-                                Utils.SHOPPING_LIST_TAG,
+                                Utils.MY_CART_FRAGMENT_TAG,
                                 ((ECartHomeActivity) (getActivity())),
                                 AnimationType.SLIDE_UP);
                     } else {
