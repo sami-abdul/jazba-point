@@ -28,7 +28,7 @@ class Category {
     var display: String? = null
     @SerializedName("image")
     @Expose
-    var image: Any? = null
+    var image: CategoryImage? = null
     @SerializedName("menu_order")
     @Expose
     var menuOrder: Int? = null
@@ -42,6 +42,33 @@ class Category {
     override fun toString(): String {
         return "Category(id=$id, name=$name, slug=$slug, parent=$parent, description=$description, display=$display, image=$image, menuOrder=$menuOrder, count=$count, links=$links)"
     }
+}
+
+class CategoryImage {
+    @SerializedName("id")
+    @Expose
+    var id: Int? = null
+    @SerializedName("date_created")
+    @Expose
+    var dateCreated: String? = null
+    @SerializedName("date_created_gmt")
+    @Expose
+    var dateCreatedGmt: String? = null
+    @SerializedName("date_modified")
+    @Expose
+    var dateModified: String? = null
+    @SerializedName("date_modified_gmt")
+    @Expose
+    var dateModifiedGmt: String? = null
+    @SerializedName("src")
+    @Expose
+    var src: String? = null
+    @SerializedName("title")
+    @Expose
+    var title: String? = null
+    @SerializedName("alt")
+    @Expose
+    var alt: String? = null
 }
 
 class Collection {

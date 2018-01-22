@@ -16,18 +16,19 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 import com.expendive.jazbapoint.R;
-import com.expendive.jazbapoint.domain.api.ProductCategoryLoaderTask;
+import com.expendive.jazbapoint.domain.api.CategoryLoaderTask;
 import com.expendive.jazbapoint.ui.activities.ECartHomeActivity;
 import com.expendive.jazbapoint.util.Utils;
 import com.expendive.jazbapoint.util.Utils.AnimationType;
 
 public class HomeFragment extends Fragment {
     int mutedColor = R.attr.colorPrimary;
-    private CollapsingToolbarLayout collapsingToolbar;
     private RecyclerView recyclerView;
+    private ScrollView scrollView;
     private boolean doubleBackToExitPressedOnce;
     private final Runnable mRunnable = new Runnable() {
         @Override
@@ -42,16 +43,16 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        view.findViewById(R.id.search_item).setOnClickListener(
-                new OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Utils.switchFragmentWithAnimation(R.id.frag_container,
-                                new SearchProductFragment(),
-                                ((ECartHomeActivity) getActivity()), null,
-                                AnimationType.SLIDE_UP);
-                    }
-                });
+//        view.findViewById(R.id.search_item).setOnClickListener(
+//                new OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        Utils.switchFragmentWithAnimation(R.id.frag_container,
+//                                new SearchProductFragment(),
+//                                ((ECartHomeActivity) getActivity()), null,
+//                                AnimationType.SLIDE_UP);
+//                    }
+//                });
 
         final Toolbar toolbar = (Toolbar) view.findViewById(R.id.anim_toolbar);
         ((ECartHomeActivity) getActivity()).setSupportActionBar(toolbar);
@@ -67,16 +68,6 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        collapsingToolbar = (CollapsingToolbarLayout) view
-                .findViewById(R.id.collapsing_toolbar);
-
-        collapsingToolbar.setTitle("Featured Products");
-
-        ImageView header = (ImageView) view.findViewById(R.id.header);
-
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),
-                R.drawable.header);
-
 //        Palette.from(bitmap).generate(new Palette.PaletteAsyncListener() {
 //            @SuppressWarnings("ResourceType")
 //            @Override
@@ -87,14 +78,15 @@ public class HomeFragment extends Fragment {
 //            }
 //        });
 
-        recyclerView = (RecyclerView) view.findViewById(R.id.scrollableview);
+        recyclerView = (RecyclerView) view.findViewById(R.id.computing_recyclerView);
+        scrollView = (ScrollView) view.findViewById(R.id.homeScrollView);
 
-        recyclerView.setHasFixedSize(true);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(
-                getActivity());
-        recyclerView.setLayoutManager(linearLayoutManager);
-
-        new ProductCategoryLoaderTask(recyclerView, getActivity()).execute();
+//        recyclerView.setHasFixedSize(true);
+//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(
+//                getActivity());
+//        recyclerView.setLayoutManager(linearLayoutManager);
+//
+        new CategoryLoaderTask(scrollView, recyclerView, getActivity()).execute();
 
 //
 //		if (simpleRecyclerAdapter == null) {

@@ -48,14 +48,11 @@ public class ProductListAdapter extends
 
     public ProductListAdapter(String subcategoryKey, Context context,
                               boolean isCartlist) {
-
         if (isCartlist) {
-
             productList = CenterRepository.getCenterRepository()
                     .getListOfProductsInShoppingList();
 
         } else {
-
             productList = CenterRepository.getCenterRepository().getMapOfProductsInCategory()
                     .get(subcategoryKey);
         }
@@ -74,7 +71,6 @@ public class ProductListAdapter extends
     @Override
     public void onBindViewHolder(final VersionViewHolder holder,
                                  final int position) {
-
         holder.itemName.setText(productList.get(position)
                 .getItemName());
 

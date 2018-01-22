@@ -36,7 +36,7 @@ class ProductCollection {
     var href: String? = null
 }
 
-class Image {
+class ProductImage {
     @SerializedName("id")
     @Expose
     var id: Int? = null
@@ -76,6 +76,10 @@ class ProductCategory {
     @SerializedName("slug")
     @Expose
     var slug: String? = null
+
+    override fun toString(): String {
+        return "ProductCategory(id=$id, name=$name, slug=$slug)"
+    }
 }
 
 class Dimensions {
@@ -123,7 +127,7 @@ class Product {
     var status: String? = null
     @SerializedName("featured")
     @Expose
-    var featured: Boolean? = null
+    var featured: Boolean = false
     @SerializedName("catalog_visibility")
     @Expose
     var catalogVisibility: String? = null
@@ -204,7 +208,7 @@ class Product {
     var stockQuantity: Any? = null
     @SerializedName("in_stock")
     @Expose
-    var inStock: Boolean? = null
+    var inStock: Boolean = true
     @SerializedName("backorders")
     @Expose
     var backorders: String? = null
@@ -267,7 +271,7 @@ class Product {
     private var tags: List<Any>? = null
     @SerializedName("images")
     @Expose
-    private var images: List<Image>? = null
+    private var images: List<ProductImage>? = null
     @SerializedName("attributes")
     @Expose
     private var attributes: List<Any>? = null

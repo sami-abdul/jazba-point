@@ -6,12 +6,19 @@ public class ProductCategoryModel {
     private String categoryDescription;
     private String categoryDiscount;
     private String categoryImageUrl;
+
+    public ProductCategoryModel() {
+    }
+
     /**
      * @param productCategoryName
      * @param productCategoryDescription
      * @param productCategoryDiscount
      * @param productCategoryUrl
      */
+
+
+
     public ProductCategoryModel(String productCategoryName, String productCategoryDescription,
                                 String productCategoryDiscount, String productCategoryUrl) {
         super();

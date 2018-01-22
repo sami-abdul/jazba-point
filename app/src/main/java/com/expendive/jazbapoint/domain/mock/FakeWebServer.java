@@ -1,10 +1,12 @@
 package com.expendive.jazbapoint.domain.mock;
 
+import com.expendive.jazbapoint.models.Category;
 import com.expendive.jazbapoint.models.CenterRepository;
 import com.expendive.jazbapoint.models.entities.Product;
 import com.expendive.jazbapoint.models.entities.ProductCategoryModel;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class FakeWebServer {
@@ -12,23 +14,14 @@ public class FakeWebServer {
     private static FakeWebServer fakeServer;
 
     public static FakeWebServer getFakeWebServer() {
-
         if (null == fakeServer) {
             fakeServer = new FakeWebServer();
         }
         return fakeServer;
     }
 
-    void initiateFakeServer() {
-
-        addCategory();
-
-    }
-
     public void addCategory() {
-
         ArrayList<ProductCategoryModel> listOfCategory = new ArrayList<ProductCategoryModel>();
-
         listOfCategory
                 .add(new ProductCategoryModel(
                         "Electronic",
@@ -46,12 +39,36 @@ public class FakeWebServer {
         CenterRepository.getCenterRepository().setListOfCategory(listOfCategory);
     }
 
+    public void addCategory(List<Category> list) {
+        ArrayList<ProductCategoryModel> listOfCategory = new ArrayList<ProductCategoryModel>();
+        for (Category item : list) {
+            ProductCategoryModel model = new ProductCategoryModel(
+                    item.getName(),
+                    item.getDescription(),
+                    item.getDisplay(),
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeNSONF3fr9bZ6g0ztTAIPXPRCYN9vtKp1dXQB2UnBm8n5L34r");
+            listOfCategory.add(model);
+        }
+//        listOfCategory
+//                .add(new ProductCategoryModel(
+//                        "Electronic",
+//                        "Electric Items",
+//                        "10%",
+//                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeNSONF3fr9bZ6g0ztTAIPXPRCYN9vtKp1dXQB2UnBm8n5L34r"));
+//
+//        listOfCategory
+//                .add(new ProductCategoryModel(
+//                        "Furnitures",
+//                        "Furnitures Items",
+//                        "15%",
+//                        "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRaUR5_wzLgBOuNtkWjOxhgaYaPBm821Hb_71xTyQ-OdUd-ojMMvw"));
+
+        CenterRepository.getCenterRepository().setListOfCategory(listOfCategory);
+    }
+
     public void getAllElectronics() {
-
         ConcurrentHashMap<String, ArrayList<Product>> productMap = new ConcurrentHashMap<String, ArrayList<Product>>();
-
         ArrayList<Product> productlist = new ArrayList<Product>();
-
         // Ovens
         productlist
                 .add(new Product(
@@ -64,7 +81,6 @@ public class FakeWebServer {
                         "0",
                         "http://img6a.flixcart.com/image/microwave-new/3/3/z/ifb-17pmmec1-400x400-imae4g4uzzjsumhk.jpeg",
                         "oven_1"));
-
         productlist
                 .add(new Product(
                         "Solo Microwave Oven",
@@ -76,7 +92,6 @@ public class FakeWebServer {
                         "0",
                         "http://img6a.flixcart.com/image/microwave-new/z/j/p/bajaj-1701mt-400x400-imae4ty4vyzhaagz.jpeg",
                         "oven_2"));
-
         productlist
                 .add(new Product(
                         "Solo Microwave Oven",
@@ -88,7 +103,6 @@ public class FakeWebServer {
                         "0",
                         "http://img6a.flixcart.com/image/microwave-new/z/j/p/bajaj-1701mt-400x400-imae4ty4vyzhaagz.jpeg",
                         "oven_3"));
-
         productlist
                 .add(new Product(
                         "Solo Microwave Oven",
@@ -100,7 +114,6 @@ public class FakeWebServer {
                         "0",
                         "http://img6a.flixcart.com/image/microwave-new/z/j/p/bajaj-1701mt-400x400-imae4ty4vyzhaagz.jpeg",
                         "oven_4"));
-
         productlist
                 .add(new Product(
                         "Solo Microwave Oven",
@@ -112,9 +125,7 @@ public class FakeWebServer {
                         "0",
                         "http://img6a.flixcart.com/image/microwave-new/y/k/m/ifb-25sc4-400x400-imaef2pztynvqjaf.jpeg",
                         "oven_5"));
-
         productMap.put("Microwave oven", productlist);
-
         ArrayList<Product> tvList = new ArrayList<Product>();
 
         // TV
@@ -128,7 +139,6 @@ public class FakeWebServer {
                 "0",
                 "http://img5a.flixcart.com/image/television/g/y/w/vu-32k160mrevd-400x400-imae93ahpwtchzys.jpeg",
                 "tv_1"));
-
         tvList.add(new Product(
                 "LED 1",
                 "Vu 80cm (32) HD Ready LED TV",
@@ -139,7 +149,6 @@ public class FakeWebServer {
                 "0",
                 "http://img6a.flixcart.com/image/television/z/f/w/bpl-bpl080d51h-400x400-imaeeztqvhxbnam2.jpeg",
                 "tv_2"));
-
         tvList.add(new Product(
                 "LED 2",
                 "Vu 80cm (32) HD Ready LED TV",
@@ -150,7 +159,6 @@ public class FakeWebServer {
                 "0",
                 "http://img6a.flixcart.com/image/television/f/b/z/micromax-43x6300mhd-400x400-imaednxv8bgznhbx.jpeg",
                 "tv_3"));
-
         tvList.add(new Product(
                 "LED 3",
                 "Vu 80cm (32) HD Ready LED TV",
@@ -161,7 +169,6 @@ public class FakeWebServer {
                 "0",
                 "http://img6a.flixcart.com/image/television/a/w/z/vu-32d6545-400x400-imaebagzbpzqhmxc.jpeg",
                 "tv_4"));
-
         tvList.add(new Product(
                 "LED 4",
                 "Vu 80cm (32) HD Ready LED TV",
@@ -174,7 +181,6 @@ public class FakeWebServer {
                 "tv_5"));
 
         productMap.put("Television", tvList);
-
         productlist = new ArrayList<Product>();
 
         // Vaccum Cleaner
@@ -189,7 +195,6 @@ public class FakeWebServer {
                         "0",
                         "http://img5a.flixcart.com/image/vacuum-cleaner/e/e/g/eureka-forbes-easy-clean-easy-clean-plus-400x400-imae7dam5ey3vaeb.jpeg",
                         "v_cleaner_1"));
-
         productlist
                 .add(new Product(
                         "Easy Clean Plus Hand-held ",
@@ -201,7 +206,6 @@ public class FakeWebServer {
                         "0",
                         "http://img6a.flixcart.com/image/vacuum-cleaner/j/e/x/nova-vc-761h-plus-vacuum-cleaner-400x400-imaecmhyadgxzzpg.jpeg",
                         "v_cleaner_2"));
-
         productlist
                 .add(new Product(
                         "Easy Clean Plus Hand-held ",
@@ -213,7 +217,6 @@ public class FakeWebServer {
                         "0",
                         "http://img6a.flixcart.com/image/vacuum-cleaner/y/g/b/eureka-forbes-car-clean-car-clean-400x400-imae376v2kta5utj.jpeg",
                         "v_cleaner_3"));
-
         productlist
                 .add(new Product(
                         "Easy Clean Plus Hand-held ",
@@ -225,7 +228,6 @@ public class FakeWebServer {
                         "0",
                         "http://img5a.flixcart.com/image/vacuum-cleaner/m/y/g/sarita-115-400x400-imae9b5zhzjagykx.jpeg",
                         "v_cleaner_4"));
-
         productlist
                 .add(new Product(
                         "Easy Clean Plus Hand-held ",
