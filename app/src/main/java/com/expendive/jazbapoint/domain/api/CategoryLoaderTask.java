@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.expendive.jazbapoint.R;
 import com.expendive.jazbapoint.domain.mock.FakeWebServer;
+import com.expendive.jazbapoint.models.Category;
 import com.expendive.jazbapoint.models.Product;
 import com.expendive.jazbapoint.ui.activities.ECartHomeActivity;
 import com.expendive.jazbapoint.ui.adapter.CategoryListAdapter;
@@ -66,7 +67,7 @@ public class CategoryLoaderTask extends AsyncTask<String, Void, Void> {
 
         if (rootView != null) {
             CategoryListAdapter simpleRecyclerAdapter = new CategoryListAdapter(context);
-            rootView.setAdapter(simpleRecyclerAdapter);
+            computingRecyclerView.setAdapter(simpleRecyclerAdapter);
             simpleRecyclerAdapter
                     .SetOnItemClickListener(new OnItemClickListener() {
                         @Override
@@ -84,10 +85,13 @@ public class CategoryLoaderTask extends AsyncTask<String, Void, Void> {
 
     @Override
     protected Void doInBackground(String... params) {
-        computers = new ProductFetcher(ProductFetcher.COMPUTING_CATEGORY).getProducts();
-        accessories = new ProductFetcher(ProductFetcher.ACCESSORIES_CATEGORY).getProducts();
-        phonesTablets = new ProductFetcher(ProductFetcher.PHONES_TABLETS_CATEGORY).getProducts();
-        groceries = new ProductFetcher(ProductFetcher.GROCERS_CATEGORY).getProducts();
+//        computers = new ProductFetcher(ProductFetcher.COMPUTING_CATEGORY).getProducts();
+//        accessories = new ProductFetcher(ProductFetcher.ACCESSORIES_CATEGORY).getProducts();
+//        phonesTablets = new ProductFetcher(ProductFetcher.PHONES_TABLETS_CATEGORY).getProducts();
+//        groceries = new ProductFetcher(ProductFetcher.GROCERS_CATEGORY).getProducts();
+        List<Category> list = new ProductFetcher("").getCategories();
+        for (Category cat : list)
+            System.out.println(cat);
         FakeWebServer.getFakeWebServer().addCategory();
         return null;
     }

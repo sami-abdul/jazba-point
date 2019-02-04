@@ -17,7 +17,7 @@ import org.scribe.model.Verb
  * Created by Abdul Sami on 1/16/2018.
  */
 
-class ProductFetcher(private val category: String) {
+class ProductFetcher(category: String) {
 
     companion object {
         const val COMPUTING_CATEGORY = "125"
@@ -28,8 +28,8 @@ class ProductFetcher(private val category: String) {
         const val MEN_FASHION_CATEGORY = "0"
     }
 
-    private val url = PRODUCTS_RETRIEVAL_URL + "/?category=" + category
-//    private val url = PRODUCTS_RETRIEVAL_URL + "/categories"
+//    private val url = PRODUCTS_RETRIEVAL_URL + "/?category=" + category
+    private val url = PRODUCTS_RETRIEVAL_URL + "/categories"
 
     private val service = ServiceBuilder().provider(OneLeggedApi10::class.java)
             .apiKey(CONSUMER_KEY)
@@ -45,6 +45,7 @@ class ProductFetcher(private val category: String) {
 
     fun getCategories(): List<Category> {
         val response = request.send()
+        println(response.message)
         if (response.isSuccessful) {
             val gson = Gson()
             Log.v(AppConstants.APP_TAG, response.body)
